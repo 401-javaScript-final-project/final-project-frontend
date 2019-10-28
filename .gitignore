@@ -83,6 +83,9 @@ typings/
 # dotenv environment variables file
 .env
 
+config/
+
+config.js
 
 ### OSX ###
 *.DS_Store
