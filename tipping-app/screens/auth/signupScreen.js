@@ -17,9 +17,23 @@ class SignUp extends React.Component {
     };
     // this.registerUser("testemailaddress@gmail.com", "fakepassword");
 
-    let that = this;
+    // let that = this;
 
     f.auth().onAuth;
+    auth.signOut()
+    .then(() => {
+      console.log('Logged out...')
+    }).catch(() => {
+      console.log('Error:', error);
+    });
+
+    f.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        console.log("Logged in", user);
+      } else {
+        console.log("logged out");
+      }
+    });
   }
 
   registerUser = (email, password) => {
@@ -30,7 +44,6 @@ class SignUp extends React.Component {
       .then(userObj => console.log(email, password, userObj))
       .catch(error => console.log("error logging in", error));
   };
-  oncl
 
   render() {
     return (
@@ -50,7 +63,10 @@ class SignUp extends React.Component {
         <TouchableHighlight style={{ backgroundColor: "red" }}>
           <Button
             title="Sign Up"
-            onPress={() => { this.registerUser(this.state.email, this.state.pass),this.props.navigation.navigate("LoginScreen");}}
+            onPress={() => {
+              this.registerUser(this.state.email, this.state.pass),
+                this.props.navigation.navigate("ScannerScreen");
+            }}
             // onPress={() => {this.props.navigation.navigate("LoginScreen")}
             // onPress={() => this.registerUser(this.state.email, this.state.pass)}
           />
