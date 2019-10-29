@@ -6,7 +6,7 @@ import {
   TouchableHighlight,
   TextInput
 } from "react-native";
-// import {styles} from '../../styles/styles.js';
+import {styles} from '../../styles/styles.js';
 import { f, auth, database } from "./../../config/config.js";
 
 class SignUp extends React.Component {
@@ -47,7 +47,7 @@ class SignUp extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <View style={styles.center}>
         <Text>Email:</Text>
         <TextInput
           onChangeText={text => this.setState({ email: text })}

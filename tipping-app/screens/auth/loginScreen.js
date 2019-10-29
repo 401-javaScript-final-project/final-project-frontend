@@ -55,7 +55,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <View style={styles.center}>
         <Text>Email:</Text>
         <TextInput
           onChangeText={text => this.setState({ email: text })}
