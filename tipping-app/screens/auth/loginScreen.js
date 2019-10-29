@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, Button, TextInput } from "react-native";
+import { View, Text, Button, TextInput, KeyboardAvoidingView } from "react-native";
 import { styles } from "../../styles/styles.js";
 import { f, auth, database } from "./../../config/config.js";
 
@@ -56,28 +56,32 @@ class Login extends React.Component {
   render() {
     return (
       <View style={styles.center}>
-        <Text>Email:</Text>
-        <TextInput
+        <Text style={styles.title}>Email:</Text>
+        <TextInput style={styles.textInput}
           onChangeText={text => this.setState({ email: text })}
           value={this.state.email}
         />
-        <Text>Password:</Text>
-        <TextInput
+        <Text style={styles.title}>Password:</Text>
+        <TextInput style={styles.textInput}
           onChangeText={text => this.setState({ pass: text })}
           secureTextEntry={true}
           value={this.state.pass}
         />
-        <Button
+        <View style={styles.button}>
+        <Button 
           title="Login"
           onPress={() => {
             this.loginUser(this.state.email, this.state.pass)
               // this.props.navigation.navigate("HomeScreen");
           }}
         />
-        <Button
+        </View>
+        <View style={styles.button}>
+        <Button style={styles.button}
           title="Sign Up"
           onPress={() => this.props.navigation.navigate("SignUpScreen")}
         />
+        </View>
       </View>
     );
   }

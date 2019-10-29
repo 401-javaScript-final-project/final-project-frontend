@@ -48,19 +48,19 @@ class SignUp extends React.Component {
   render() {
     return (
       <View style={styles.center}>
-        <Text>Email:</Text>
-        <TextInput
+        <Text style={styles.title}>Email:</Text>
+        <TextInput style={styles.textInput}
           onChangeText={text => this.setState({ email: text })}
           value={this.state.email}
         />
-        <Text>Password:</Text>
-        <TextInput
+        <Text style={styles.title}>Password:</Text>
+        <TextInput style={styles.textInput}
           onChangeText={text => this.setState({ pass: text })}
           secureTextEntry={true}
           value={this.state.pass}
         />
-
-        <TouchableHighlight style={{ backgroundColor: "red" }}>
+        <View style={styles.button}>
+        <TouchableHighlight style={styles.title}>
           <Button
             title="Sign Up"
             onPress={() => {
@@ -71,6 +71,7 @@ class SignUp extends React.Component {
             // onPress={() => this.registerUser(this.state.email, this.state.pass)}
           />
         </TouchableHighlight>
+        </View>
       </View>
     );
   }
