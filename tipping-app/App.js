@@ -6,12 +6,14 @@ import { createStackNavigator } from "react-navigation-stack";
 import Login from "./screens/auth/loginScreen.js";
 import Home from "./screens/app/homeScreen.js";
 import SignUp from "./screens/auth/signupScreen.js";
+import Scanner from "./screens/app/scannerScreen.js";
 
 const RootStack = createStackNavigator(
   {
     LoginScreen: Login,
     HomeScreen: Home,
-    SignUpScreen: SignUp
+    SignUpScreen: SignUp,
+    ScannerScreen: Scanner
   },
   {
     initialRouteName: "LoginScreen"
