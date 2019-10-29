@@ -15,7 +15,8 @@ export const styles = StyleSheet.create({
   textInput: {
     borderColor: 'gray',
     borderWidth: 1,
-    width: 200
+    width: '70%',
+    textAlign: 'center',
   },
   button: {
     margin: 10,
