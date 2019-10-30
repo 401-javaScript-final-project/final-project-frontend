@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 360,
-  "expoServerNgrokUrl": "https://bq-xyh.anonymous.tipping-app.exp.direct",
-  "packagerNgrokUrl": "https://packager.bq-xyh.anonymous.tipping-app.exp.direct",
-  "ngrokPid": 426,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }
