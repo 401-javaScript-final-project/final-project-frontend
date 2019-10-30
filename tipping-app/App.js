@@ -7,12 +7,14 @@ import Login from "./screens/auth/loginScreen.js";
 import Home from "./screens/app/homeScreen.js";
 import SignUp from "./screens/auth/signupScreen.js";
 import Scanner from "./screens/app/scannerScreen.js";
+import QR from "./screens/app/qr.js";
 
 const RootStack = createStackNavigator(
   {
     LoginScreen: Login,
     HomeScreen: Home,
     SignUpScreen: SignUp,
+    QRCode: QR,
     ScannerScreen: Scanner
   },
   {
