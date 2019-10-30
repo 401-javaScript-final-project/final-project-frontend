@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {View, Text, Button} from 'react-native';
 import {styles} from '../../styles/styles.js';
 import { f, auth, database } from "./../../config/config.js";
+import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
+
+import Scanner from './scannerScreen.js';
 
 class Home extends React.Component {
 
@@ -32,4 +35,7 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default createMaterialBottomTabNavigator({
+  Home: {screen: Home},
+  Scanner: {screen: Scanner}
+});

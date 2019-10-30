@@ -30,6 +30,8 @@ class Login extends React.Component {
     });
   }
 
+  
+
   loginUser = async (email, pass) => {
     if(email !== '' && pass !== '') {
       try{
