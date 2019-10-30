@@ -3,6 +3,6 @@
   "lanType": "ip",
   "dev": true,
   "minify": false,
-  "urlRandomness": "nt-apa",
+  "urlRandomness": "ix-pcd",
   "https": false
 }
