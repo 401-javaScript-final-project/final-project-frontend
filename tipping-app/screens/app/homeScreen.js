@@ -26,7 +26,7 @@ class Home extends React.Component {
       <View style={styles.center}>
         <Text>Home</Text>
         <Button
-          title="Login"
+          title="Logout"
           onPress={() => {
             this.signUserOut();
           }}
