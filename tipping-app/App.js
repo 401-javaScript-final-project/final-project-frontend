@@ -8,6 +8,8 @@ import Home from "./screens/app/homeScreen.js";
 import SignUp from "./screens/auth/signupScreen.js";
 import Scanner from "./screens/app/scannerScreen.js";
 import QRCode from "./screens/app/qrScreen.js";
+import Payment from "./screens/app/paymentScreen.js";
+
 
 const RootStack = createStackNavigator(
   {
@@ -15,7 +17,8 @@ const RootStack = createStackNavigator(
     HomeScreen: Home,
     SignUpScreen: SignUp,
     QRCode: QRCode,
-    ScannerScreen: Scanner
+    ScannerScreen: Scanner,
+    PaymentScreen: Payment
   },
   {
     initialRouteName: "LoginScreen"
