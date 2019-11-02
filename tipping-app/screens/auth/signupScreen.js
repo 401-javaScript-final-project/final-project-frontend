@@ -60,7 +60,7 @@ class SignUp extends React.Component {
           value={this.state.pass}
         />
         <View style={styles.button}>
-        <TouchableHighlight style={styles.title}>
+        <TouchableHighlight style={styles.button}>
           <Button
             title="Sign Up"
             onPress={() => {
