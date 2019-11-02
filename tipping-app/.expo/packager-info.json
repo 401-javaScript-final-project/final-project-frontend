@@ -1,1 +1,9 @@
-{}
+{
+  "expoServerPort": 19000,
+  "expoServerNgrokUrl": "https://3t-ebx.lizkavalski.tipping-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.3t-ebx.lizkavalski.tipping-app.exp.direct",
+  "ngrokPid": 1151,
+  "devToolsPort": 19002,
+  "packagerPort": 19001,
+  "packagerPid": 1132
+}
