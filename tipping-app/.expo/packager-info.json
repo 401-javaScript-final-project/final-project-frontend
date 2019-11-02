@@ -1,10 +1,12 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 777,
-  "expoServerNgrokUrl": "https://ix-pcd.lizkavalski.tipping-app.exp.direct",
-  "packagerNgrokUrl": "https://packager.ix-pcd.lizkavalski.tipping-app.exp.direct",
-  "ngrokPid": 803,
+
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
+
   "webpackServerPort": null
 }
