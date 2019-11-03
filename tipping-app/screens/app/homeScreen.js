@@ -24,7 +24,7 @@ class Home extends React.Component {
   render() {
     return (
       <View style={styles.center}>
-        <Image source={require('../../styles/hat1.png')} style={styles.img}/>   
+        <Image source={require('../../styles/hat2.png')} style={styles.img}/>   
         <Text>Home</Text>
         <Button
           title="Logout"

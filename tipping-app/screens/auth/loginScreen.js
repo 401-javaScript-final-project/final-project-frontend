@@ -58,7 +58,7 @@ class Login extends React.Component {
   render() {
     return (
       <View style={styles.center}>
-        <Image source={require('../../styles/hat1.png')} style={styles.img}/>
+        <Image source={require('../../styles/hat2.png')} style={styles.img}/>
         <Text style={styles.title}>Email:</Text>
         <TextInput style={styles.textInput}
           onChangeText={text => this.setState({ email: text })}
