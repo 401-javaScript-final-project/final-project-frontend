@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
-import Constants from 'expo-constants';
-import * as Permissions from 'expo-permissions';
+import * as React from "react";
+import { Text, View, StyleSheet, Button } from "react-native";
+import Constants from "expo-constants";
+import * as Permissions from "expo-permissions";
 
-import { BarCodeScanner } from 'expo-barcode-scanner';
+import { BarCodeScanner } from "expo-barcode-scanner";
 
 export default class ScannerScreen extends React.Component {
   state = {
     hasCameraPermission: null,
-    scanned: false,
+    scanned: false
   };
 
   async componentDidMount() {
@@ -17,7 +17,7 @@ export default class ScannerScreen extends React.Component {
 
   getPermissionsAsync = async () => {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
-    this.setState({ hasCameraPermission: status === 'granted' });
+    this.setState({ hasCameraPermission: status === "granted" });
   };
 
   render() {
@@ -33,27 +33,51 @@ export default class ScannerScreen extends React.Component {
       <View
         style={{
           flex: 1,
-          flexDirection: 'column',
-          justifyContent: 'flex-end',
-        }}>
+          flexDirection: "column",
+          justifyContent: "flex-end"
+        }}
+      >
         <BarCodeScanner
           onBarCodeScanned={scanned ? undefined : this.handleBarCodeScanned}
           style={StyleSheet.absoluteFillObject}
         />
 
         {scanned && (
-          <Button title={'Tap to Scan Again'} onPress={() => this.setState({ scanned: false })} />
+          <Button
+            title={"Tap to Scan Again"}
+            onPress={() => this.setState({ scanned: false })}
+          />
         )}
       </View>
     );
   }
 
   handleBarCodeScanned = ({ type, data }) => {
+    // this.setState({ scanned: true });
+    // alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+
+    // if(type.startsWith('org.iso.QRCode')) {
+    //   this.props.navigation.navigate("HomeScreen");
+    // }
+
+    if (
+      (type === this.state.scanned.type && data === this.state.scanned.data) ||
+      data === null
+    ) {
+      return;
+    }
+
+    // Vibration.vibrate();
     this.setState({ scanned: true });
-    alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+
+    if (type.startsWith("org.iso.QRCode")) {
+      // Do something for EAN
+      console.log(`QR scanned: ${data}`);
+      // this.resetScanner();
+      this.props.navigation.navigate("PaymentScreen", { data: data });
+    }
   };
 }
-
 
 // // /This is an example code to generate QR code//
 // import React, { Component } from 'react';
@@ -67,7 +91,7 @@ export default class ScannerScreen extends React.Component {
 // } from 'react-native';
 // // import all basic components
 // import QRCode from 'react-native-qrcode-svg';
- 
+
 // class App extends Component {
 //   constructor() {
 //     super();
@@ -151,7 +175,3 @@ export default class ScannerScreen extends React.Component {
 //     fontSize: 18,
 //   },
 // });
-
-
-
-
