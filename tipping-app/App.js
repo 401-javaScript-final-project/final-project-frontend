@@ -1,8 +1,9 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Platform, InteractionManager } from "react-native";
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
+import './screens/app/fixtimerbug' //for android timer issue
 import Login from "./screens/auth/loginScreen.js";
 import Home from "./screens/app/homeScreen.js";
 import SignUp from "./screens/auth/signupScreen.js";
