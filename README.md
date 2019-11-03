@@ -9,6 +9,7 @@
 * [travis](http://xyz.com)
 * [back-end](http://xyz.com) (when applicable)
 * [front-end](http://xyz.com) (when applicable)
+* Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from www.flaticon.com
 
 #### Documentation
 * [api docs](http://xyz.com) (API servers)

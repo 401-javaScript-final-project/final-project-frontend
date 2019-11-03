@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Text, Button, Image} from 'react-native';
 import {styles} from '../../styles/styles.js';
 import { f, auth, database } from "./../../config/config.js";
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
@@ -24,9 +24,10 @@ class Home extends React.Component {
   render() {
     return (
       <View style={styles.center}>
+        <Image source={require('../../styles/hat2.png')} style={styles.img}/>   
         <Text>Home</Text>
         <Button
-          title="Login"
+          title="Logout"
           onPress={() => {
             this.signUserOut();
           }}

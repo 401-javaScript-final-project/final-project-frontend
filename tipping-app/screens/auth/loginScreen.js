@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, Button, TextInput, KeyboardAvoidingView } from "react-native";
+import { View, Text, Button, TextInput, KeyboardAvoidingView,Image } from "react-native";
 import { styles } from "../../styles/styles.js";
 import { f, auth, database } from "./../../config/config.js";
 
@@ -58,6 +58,7 @@ class Login extends React.Component {
   render() {
     return (
       <View style={styles.center}>
+        <Image source={require('../../styles/hat2.png')} style={styles.img}/>
         <Text style={styles.title}>Email:</Text>
         <TextInput style={styles.textInput}
           onChangeText={text => this.setState({ email: text })}

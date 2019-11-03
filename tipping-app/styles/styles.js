@@ -30,6 +30,11 @@ export const styles = StyleSheet.create({
     margin: 5,
     flexDirection: 'row',
     backgroundColor:'#F4F6F7',
-    borderRadius:10
+    borderRadius:10,
+  },
+  img: {
+    width: 100,
+    height:100,
+    marginBottom:30,
   }
 });
