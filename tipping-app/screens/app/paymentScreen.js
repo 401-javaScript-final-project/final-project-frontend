@@ -1,8 +1,9 @@
 import * as React from "react";
-import { Text, View, StyleSheet, Button } from "react-native";
+import { Text, View, StyleSheet, Button,Image } from "react-native";
 import Constants from "expo-constants";
 import {styles} from '../../styles/styles.js';
 import SearchableDropdown from 'react-native-searchable-dropdown';
+
 
 
 //Item array for the dropdown
@@ -41,62 +42,70 @@ export default class PaymentScreen extends React.Component {
     return (
       
       <View style={styles.center}>
-                <Text style={{ marginLeft: 10 }}>
+        <Text style={styles.title}>
           How much would you like to tip?
         </Text>
-            <Button
-            title="TIP"
-            onPress={() => Alert.alert('Tip button pressed')}
-            />
-        <SearchableDropdown
-          onTextChange={text => console.log(text)}
-          //On text change listner on the searchable input
-          onItemSelect={item => alert(JSON.stringify(amounts))}
-          //onItemSelect called after the selection from the dropdown
-          containerStyle={{ padding: 5 }}
-          //suggestion container style
-          textInputStyle={{
-            //inserted text style
-            padding: 12,
-            borderWidth: 1,
-            borderColor: '#ccc',
-            backgroundColor: '#FAF7F6',
-          }}
-          itemStyle={{
-            //single dropdown item style
-            padding: 10,
-            marginTop: 2,
-            backgroundColor: '#FAF9F8',
-            borderColor: '#bbb',
-            borderWidth: 1,
-          }}
-          itemTextStyle={{
-            //text style of a single dropdown item
-            color: '#222',
-          }}
-          itemsContainerStyle={{
-            //items container style you can pass maxHeight
-            //to restrict the items dropdown hieght
-            maxHeight: '60%',
-          }}
-          items={amounts}
-          //mapping of item array
-          defaultIndex={2}
-          //default selected item index
-          placeholder="Amount"
-          //place holder for the search input
-          resetValue={false}
-          //reset textInput Value with true and false state
-          underlineColorAndroid="transparent"
-          //To remove the underline from the android input
-        />
-        <Text style={{ marginLeft: 10 }}></Text>
-        <Button
+        <View style={styles.tipButton}>
+      <Button
+      title="TIP"
+      onPress={() => Alert.alert('Tip button pressed')}
+      />
+
+  <SearchableDropdown
+    onTextChange={text => console.log(text)}
+    //On text change listner on the searchable input
+    onItemSelect={item => alert(JSON.stringify(amounts))}
+    //onItemSelect called after the selection from the dropdown
+    containerStyle={{ padding: 5 }}
+    //suggestion container style
+    textInputStyle={{
+      //inserted text style
+      padding: 12,
+      borderWidth: 1,
+      borderColor: '#ccc',
+      backgroundColor: '#FAF7F6',
+    }}
+    itemStyle={{
+      //single dropdown item style
+      padding: 10,
+      marginTop: 2,
+      backgroundColor: '#FAF9F8',
+      borderColor: '#bbb',
+      borderWidth: 1,
+    }}
+    itemTextStyle={{
+      //text style of a single dropdown item
+      color: '#222',
+    }}
+    itemsContainerStyle={{
+      //items container style you can pass maxHeight
+      //to restrict the items dropdown hieght
+      maxHeight: '60%',
+    }}
+    items={amounts}
+    //mapping of item array
+    defaultIndex={2}
+    //default selected item index
+    placeholder="Amount"
+    //place holder for the search input
+    resetValue={false}
+    //reset textInput Value with true and false state
+    underlineColorAndroid="transparent"
+    //To remove the underline from the android input
+  />
+
+        </View>
+    <Image source={require('../../styles/images/hat2.png')} style={styles.img}/>
+        {/* <View style={styles.button}>
+        <Text style={{ marginLeft: 10 }}>
+        </Text>
+        <Button 
           title="Login"
           onPress={() => {
             this.signUserOut();
           }}
-        />
+        /> */}
+        {/* </View> */}
       </View>
     );
   }
