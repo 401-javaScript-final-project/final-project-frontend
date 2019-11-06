@@ -104,8 +104,8 @@ export default class PaymentScreen extends React.Component {
           onPress={() => {
             this.signUserOut();
           }}
-        /> */}
-        {/* </View> */}
+        /> 
+        </View> */}
       </View>
     );
   }
