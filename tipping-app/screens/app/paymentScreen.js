@@ -54,7 +54,7 @@ export default class PaymentScreen extends React.Component {
   <SearchableDropdown
     onTextChange={text => console.log(text)}
     //On text change listner on the searchable input
-    onItemSelect={item => alert(JSON.stringify(amounts))}
+    onItemSelect={item => alert(JSON.stringify(item))}
     //onItemSelect called after the selection from the dropdown
     containerStyle={{ padding: 5 }}
     //suggestion container style
