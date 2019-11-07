@@ -1,14 +1,15 @@
-# LAB - 
+# LAB - 401 Final Project
 
-## Project Name
+## Project Name - Tipsy Hat?
 
-### Author: Student/Group Name
+### Author: <Group Name Here> - Jeremy Lee, Elizabeth Kavalski, Adrienne Easton, Joseph Hangarter
 
 ### Links and Resources
 * [submission PR](http://xyz.com)
 * [travis](http://xyz.com)
 * [back-end](http://xyz.com) (when applicable)
 * [front-end](http://xyz.com) (when applicable)
+* Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from www.flaticon.com
 
 #### Documentation
 * [api docs](http://xyz.com) (API servers)
@@ -16,7 +17,22 @@
 * [style guide](http://xyz.com) (React assignments)
 
 ### Modules
-#### `modulename.js`
+#### `App.js`
+#### `screens folder`
+  * #### `auth folder`
+    * #### `signupScreen.js`
+    * #### `loginScreen.js`
+#### `app folder`
+  * #### `homeScreen.js`
+  * #### `qrScreen.js`
+  * #### `paymentScreen.js`
+  * #### `scanner.js`
+  * #### `fixtimerbug.js` - temporary fix for android timer bug issue with react native + firebase
+#### `navigation folder`
+  * #### `mainNavigator.js`
+#### `styles folder`
+  * #### `styles.js`
+  
 ##### Exported Values and Methods
 
 ###### `foo(thing) -> string`

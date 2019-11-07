@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import { View, Text, Button, TextInput, KeyboardAvoidingView } from "react-native";
+import { View, Text, Button, TextInput, KeyboardAvoidingView, Platform, Image } from "react-native";
 import { styles } from "../../styles/styles.js";
 import { f, auth, database } from "./../../config/config.js";
+
+const keyboardVerticalOffset = Platform.OS === 'ios' ? 140 : 120
 
 class Login extends React.Component {
   constructor(props) {
@@ -57,7 +59,8 @@ class Login extends React.Component {
 
   render() {
     return (
-      <View style={styles.center}>
+        <KeyboardAvoidingView style={styles.center} behavior="padding" enabled keyboardVerticalOffset={keyboardVerticalOffset}>
+        <Image source={require('../../styles/images/hat2.png')} style={styles.img}/>
         <Text style={styles.title}>Email:</Text>
         <TextInput style={styles.textInput}
           onChangeText={text => this.setState({ email: text })}
@@ -84,7 +87,7 @@ class Login extends React.Component {
           onPress={() => this.props.navigation.navigate("SignUpScreen")}
         />
         </View>
-      </View>
+        </KeyboardAvoidingView>
     );
   }
 }
