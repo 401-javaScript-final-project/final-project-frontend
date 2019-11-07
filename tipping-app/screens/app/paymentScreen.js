@@ -4,7 +4,12 @@ import Constants from "expo-constants";
 import {styles} from '../../styles/styles.js';
 import SearchableDropdown from 'react-native-searchable-dropdown';
 
+import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
 
+
+import Home from'./homeScreen.js';
+import QRCode from './qrScreen';
+import Scanner from './scannerScreen';
 
 //Item array for the dropdown
 const amounts = [
@@ -96,17 +101,23 @@ export default class PaymentScreen extends React.Component {
 
         </View>
     <Image source={require('../../styles/images/hat2.png')} style={styles.img}/>
-        {/* <View style={styles.button}>
+        <View style={styles.button}>
         <Text style={{ marginLeft: 10 }}>
         </Text>
         <Button 
-          title="Login"
+          title="Logout"
           onPress={() => {
             this.signUserOut();
+            console.log('signed user is out')
           }}
         /> 
-        </View> */}
+        </View>
       </View>
     );
   }
 }
+export default createMaterialBottomTabNavigator({
+  Home: {screen: Home},
+  Scanner: {screen: Scanner},
+  QRCode: {screen: QRCode},
+});

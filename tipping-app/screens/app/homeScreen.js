@@ -6,6 +6,7 @@ import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom
 
 import Scanner from './scannerScreen.js';
 import QRCode from './qrScreen';
+import Payment from './paymentScreen';
 
 class Home extends React.Component {
 
@@ -40,5 +41,5 @@ class Home extends React.Component {
 export default createMaterialBottomTabNavigator({
   Home: {screen: Home},
   Scanner: {screen: Scanner},
-  QRCode: {screen: QRCode}
+  QRCode: {screen: QRCode},
 });

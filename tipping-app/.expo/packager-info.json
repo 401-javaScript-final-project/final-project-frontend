@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 315,
-  "expoServerNgrokUrl": "https://9r-jed.anonymous.tipping-app.exp.direct",
-  "packagerNgrokUrl": "https://packager.9r-jed.anonymous.tipping-app.exp.direct",
-  "ngrokPid": 350,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }
