@@ -69,7 +69,7 @@ class SignUp extends React.Component {
             title="Sign Up"
             onPress={() => {
               this.registerUser(this.state.email, this.state.pass),
-                this.props.navigation.navigate("ScannerScreen");
+                this.props.navigation.navigate("HomeScreen");
             }}
             // onPress={() => {this.props.navigation.navigate("LoginScreen")}
             // onPress={() => this.registerUser(this.state.email, this.state.pass)}

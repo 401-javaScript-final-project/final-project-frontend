@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     backgroundColor:'#D5F5E3',
   },
   title: {
-    fontSize:20,
+    fontSize:30,
     padding:10,
     marginBottom: 10,
     overflow:'hidden',
@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
     margin: 5,
     flexDirection: 'row',
     backgroundColor:'#F4F6F7',
-    borderRadius:10,
+    // borderRadius:10,
   },
   img: {
     flexDirection:'column',
@@ -44,7 +44,38 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor:'#F4F6F7',
     borderRadius:10,
-    marginBottom:5,
-
+    height:60,
+    width:60,
+    fontSize:20,
+  },
+  horizontal: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    // padding: 10,
+  },
+  centerPay: {
+    flex: 1,
+    fontWeight: 'bold',
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection:'row',
+    flexWrap:'wrap',
+    margin: 10,
+    backgroundColor:'#D5F5E3',
+  },
+  tipTitle: {
+    fontSize:30,
+    padding:10,
+    marginBottom: 10,
+    overflow:'hidden',
+    backgroundColor:'#58D68D',
+    borderRadius:10,
+  },
+  inputTip:{
+    fontSize:30,
+    height:60,
+    width:150,
+    backgroundColor: '#F7F9F9',
+    textAlign:'center',
   }
-});
+})
