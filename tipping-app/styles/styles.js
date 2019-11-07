@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
     margin: 5,
     flexDirection: 'row',
     backgroundColor:'#F4F6F7',
-    borderRadius:10,
+    // borderRadius:10,
   },
   img: {
     flexDirection:'column',
@@ -45,6 +45,10 @@ export const styles = StyleSheet.create({
     backgroundColor:'#F4F6F7',
     borderRadius:10,
     marginBottom:5,
-
-  }
+  },
+  horizontal: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    // padding: 10,
+  },
 });

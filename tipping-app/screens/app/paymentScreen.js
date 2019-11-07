@@ -1,26 +1,7 @@
 import * as React from "react";
-import { Text, View, StyleSheet, Button,Image } from "react-native";
+import { Text, TextInput, Button, View, StyleSheet, Image, Alert, TouchableOpacity, Keyboard } from "react-native";
 import Constants from "expo-constants";
 import {styles} from '../../styles/styles.js';
-import SearchableDropdown from 'react-native-searchable-dropdown';
-
-
-
-//Item array for the dropdown
-const amounts = [
-  //name key is must.It is to show the text in front
-  { id: 1, name: 1 },
-  { id: 2, name: 5 },
-  { id: 3, name: 10 },
-  { id: 4, name: 15 },
-  { id: 5, name: 20 },
-  { id: 6, name: 25 },
-  { id: 7, name: 30 },
-  { id: 8, name: 35 },
-  { id: 9, name: 40 },
-  { id: 10, name: 45 },
-  { id: 10, name: 50 },
-];
 
 export default class PaymentScreen extends React.Component {
   constructor(props) {
@@ -28,7 +9,7 @@ export default class PaymentScreen extends React.Component {
     this.state = { 
       qrCodeData: " ", 
       scanner: undefined,
-      amountText: "Amount"
+      tipAmount: 0.00
     };
   }
 
@@ -38,75 +19,124 @@ export default class PaymentScreen extends React.Component {
     console.log(qrCodeData);
   }
 
-  render() {
+  showAlert = () => {
+    Alert.alert(
+      'Tipping',
+      `Are you sure you want to tip $${this.state.tipAmount} to ${this.state.qrCodeData}?`,
+      [
+        {text: 'Yes', onPress: () => Alert.alert('change alert to do some work!')},
+        {text: 'No', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+      ],
+      { cancelable: false }
+    )
+    Keyboard.dismiss()
+  }
+    
+  validAmount=()=>{
+    if(!this.state.tipAmount || isNaN(this.state.tipAmount)) Alert.alert("Enter an amount");
+     else {
+      this.showAlert();
+    }
+    Keyboard.dismiss() 
+  }
+  render() 
+  {
     return (
-      
-      <View style={styles.center}>
-        <Text style={styles.title}>
-          How much would you like to tip?
-        </Text>
-        <View style={styles.tipButton}>
-      <Button
-      title="TIP"
-      onPress={() => Alert.alert('Tip button pressed')}
-      />
+      <View style={{ flex: 1, marginTop: 30, flexDirection:'row', justifyContent: 'center'}}>
+                
+        <TouchableOpacity disabled={true} style={{height: 40, borderColor: 'gray', borderWidth: 1, backgroundColor: 'lightgray'}}>
+          <Text style={{fontSize: 30, justifyContent: "center"}}> $ </Text>
+        </TouchableOpacity>
+        
+        <TextInput style={{fontSize: 30, height: 40, width: 140, borderColor: 'gray', borderWidth: 1, textAlign: 'center'}}
+        keyboardType="numeric"
+        placeholder="0.00"
+        onChangeText={text => this.setState({
+            tipAmount: parseFloat(text).toFixed(2)
+          })
+        }
+        />
 
-  <SearchableDropdown
-    onTextChange={text => console.log(text)}
-    //On text change listner on the searchable input
-    onItemSelect={item => alert(JSON.stringify(item))}
-    //onItemSelect called after the selection from the dropdown
-    containerStyle={{ padding: 5 }}
-    //suggestion container style
-    textInputStyle={{
-      //inserted text style
-      padding: 12,
-      borderWidth: 1,
-      borderColor: '#ccc',
-      backgroundColor: '#FAF7F6',
-    }}
-    itemStyle={{
-      //single dropdown item style
-      padding: 10,
-      marginTop: 2,
-      backgroundColor: '#FAF9F8',
-      borderColor: '#bbb',
-      borderWidth: 1,
-    }}
-    itemTextStyle={{
-      //text style of a single dropdown item
-      color: '#222',
-    }}
-    itemsContainerStyle={{
-      //items container style you can pass maxHeight
-      //to restrict the items dropdown hieght
-      maxHeight: '60%',
-    }}
-    items={amounts}
-    //mapping of item array
-    defaultIndex={2}
-    //default selected item index
-    placeholder="Amount"
-    //place holder for the search input
-    resetValue={false}
-    //reset textInput Value with true and false state
-    underlineColorAndroid="transparent"
-    //To remove the underline from the android input
-  />
-
+        <View>
+        <Button
+          title="Tip"
+          onPress={this.validAmount}
+        />
         </View>
-    <Image source={require('../../styles/images/hat2.png')} style={styles.img}/>
-        {/* <View style={styles.button}>
-        <Text style={{ marginLeft: 10 }}>
-        </Text>
-        <Button 
-          title="Login"
-          onPress={() => {
-            this.signUserOut();
-          }}
-        /> */}
-        {/* </View> */}
       </View>
     );
   }
 }
+
+//   render() {
+//     return (
+      
+//       <View style={styles.center}>
+//         <Text style={styles.title}>
+//           How much would you like to tip?
+//         </Text>
+//         <View style={styles.tipButton}>
+//       <Button
+//       title="TIP"
+//       onPress={() => Alert.alert('Tip button pressed')}
+//       />
+
+//   <SearchableDropdown
+//     onTextChange={text => console.log(text)}
+//     //On text change listner on the searchable input
+//     onItemSelect={item => alert(JSON.stringify(item))}
+//     //onItemSelect called after the selection from the dropdown
+//     containerStyle={{ padding: 5 }}
+//     //suggestion container style
+//     textInputStyle={{
+//       //inserted text style
+//       padding: 12,
+//       borderWidth: 1,
+//       borderColor: '#ccc',
+//       backgroundColor: '#FAF7F6',
+//     }}
+//     itemStyle={{
+//       //single dropdown item style
+//       padding: 10,
+//       marginTop: 2,
+//       backgroundColor: '#FAF9F8',
+//       borderColor: '#bbb',
+//       borderWidth: 1,
+//     }}
+//     itemTextStyle={{
+//       //text style of a single dropdown item
+//       color: '#222',
+//     }}
+//     itemsContainerStyle={{
+//       //items container style you can pass maxHeight
+//       //to restrict the items dropdown hieght
+//       maxHeight: '60%',
+//     }}
+//     items={amounts}
+//     //mapping of item array
+//     defaultIndex={2}
+//     //default selected item index
+//     placeholder="Amount"
+//     //place holder for the search input
+//     resetValue={false}
+//     //reset textInput Value with true and false state
+//     underlineColorAndroid="transparent"
+//     //To remove the underline from the android input
+//   />
+
+//         </View>
+//     <Image source={require('../../styles/images/hat2.png')} style={styles.img}/>
+//         {/* <View style={styles.button}>
+//         <Text style={{ marginLeft: 10 }}>
+//         </Text>
+//         <Button 
+//           title="Login"
+//           onPress={() => {
+//             this.signUserOut();
+//           }}
+//         /> */}
+//         {/* </View> */}
+//       </View>
+//     );
+//   }
+// }

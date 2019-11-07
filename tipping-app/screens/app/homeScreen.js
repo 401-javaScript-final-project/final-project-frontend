@@ -3,7 +3,6 @@ import {View, Text, Button, Image} from 'react-native';
 import {styles} from '../../styles/styles.js';
 import { f, auth, database } from "./../../config/config.js";
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
-
 import Scanner from './scannerScreen.js';
 import QRCode from './qrScreen';
 
