@@ -1,6 +1,10 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'stretch', // or 'stretch'
+  },
   center: {
     flex: 1,
     fontWeight: 'bold',
@@ -8,6 +12,15 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     margin: 10,
     backgroundColor:'#D5F5E3',
+  },
+  mainTitle: {
+    fontSize:25,
+    padding:10,
+    marginBottom: 10,
+    overflow:'hidden',
+    borderRadius:10,
+    flexDirection: 'row',
+    fontWeight: 'bold',
   },
   title: {
     fontSize:20,
@@ -29,7 +42,6 @@ export const styles = StyleSheet.create({
   },
   button: {
     margin: 5,
-    flexDirection: 'row',
     backgroundColor:'#F4F6F7',
     // borderRadius:10,
   },
@@ -50,12 +62,7 @@ export const styles = StyleSheet.create({
     backgroundColor:'#D5F5E3',
   },
   profileImg:{
-    flexDirection:'column',
-    width: 200,
-    height:200,
-  },
-  profileImg:{
-    flexDirection:'column',
+    // flexDirection:'column',
     justifyContent: "center",
     alignItems: "center",
     width: 200,
@@ -109,5 +116,5 @@ export const styles = StyleSheet.create({
     width:150,
     backgroundColor: '#F7F9F9',
     textAlign:'center',
-  }
+  },
 })
