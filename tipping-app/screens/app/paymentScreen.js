@@ -42,13 +42,13 @@ export default class PaymentScreen extends React.Component {
   render() 
   {
     return (
-      <View style={{ flex: 1, marginTop: 30, flexDirection:'row', justifyContent: 'center'}}>
+      <View style={styles.centerPay}>
                 
-        <TouchableOpacity disabled={true} style={{height: 40, borderColor: 'gray', borderWidth: 1, backgroundColor: 'lightgray'}}>
-          <Text style={{fontSize: 30, justifyContent: "center"}}> $ </Text>
+        <TouchableOpacity disabled={true} >
+          <Text style={styles.tipTitle}> $ </Text>
         </TouchableOpacity>
         
-        <TextInput style={{fontSize: 30, height: 40, width: 140, borderColor: 'gray', borderWidth: 1, textAlign: 'center'}}
+        <TextInput style={styles.inputTip}
         keyboardType="numeric"
         placeholder="0.00"
         onChangeText={text => this.setState({
@@ -57,16 +57,18 @@ export default class PaymentScreen extends React.Component {
         }
         />
 
-        <View>
+        <View style={styles.tipButton}> 
         <Button
           title="Tip"
           onPress={this.validAmount}
         />
         </View>
+        <Image source={require('../../styles/images/hat2.png')} style={styles.img}/>
       </View>
     );
   }
 }
+
 
 //   render() {
 //     return (
@@ -140,3 +142,4 @@ export default class PaymentScreen extends React.Component {
 //     );
 //   }
 // }
+
