@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     overflow:'hidden',
     backgroundColor:'#58D68D',
     borderRadius:10,
+    flexDirection: 'row'
   },
   textInput: {
     backgroundColor: '#F7F9F9',
@@ -33,10 +34,41 @@ export const styles = StyleSheet.create({
     // borderRadius:10,
   },
   img: {
-    flexDirection:'column',
+    flexDirection:'row',
+    alignItems: "center",
+    justifyContent: "center",
     width: 100,
     height:100,
     marginBottom:30,
+  },
+  centerHome: {
+    flex: 1,
+    flexDirection:'row-reverse',
+    flexWrap:'nowrap',
+    fontWeight: 'bold',
+    justifyContent: "center",
+    backgroundColor:'#D5F5E3',
+  },
+  profileImg:{
+    flexDirection:'column',
+    width: 200,
+    height:200,
+  },
+  profileImg:{
+    flexDirection:'column',
+    justifyContent: "center",
+    alignItems: "center",
+    width: 200,
+    height:200,
+  },
+  profileTitle:{
+    fontSize:15,
+    padding:10,
+    marginBottom: 10,
+    overflow:'hidden',
+    backgroundColor:'#58D68D',
+    borderRadius:10,
+    flexDirection: 'row'
   },
   tipButton:{
     flexDirection:'row-reverse',
@@ -44,11 +76,38 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor:'#F4F6F7',
     borderRadius:10,
-    marginBottom:5,
+    height:60,
+    width:60,
+    fontSize:20,
   },
   horizontal: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     // padding: 10,
   },
-});
+  centerPay: {
+    flex: 1,
+    fontWeight: 'bold',
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection:'row',
+    flexWrap:'wrap',
+    margin: 10,
+    backgroundColor:'#D5F5E3',
+  },
+  tipTitle: {
+    fontSize:30,
+    padding:10,
+    marginBottom: 10,
+    overflow:'hidden',
+    backgroundColor:'#58D68D',
+    borderRadius:10,
+  },
+  inputTip:{
+    fontSize:30,
+    height:60,
+    width:150,
+    backgroundColor: '#F7F9F9',
+    textAlign:'center',
+  }
+})

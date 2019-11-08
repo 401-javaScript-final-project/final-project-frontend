@@ -19,7 +19,7 @@ const RootStack = createStackNavigator(
     SignUpScreen: SignUp,
     QRCode: QRCode,
     ScannerScreen: Scanner,
-    PaymentScreen: Payment
+    PaymentScreen: Payment,
   },
   {
     initialRouteName: "LoginScreen"
