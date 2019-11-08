@@ -4,10 +4,14 @@ import {
   Text,
   Button,
   TouchableHighlight,
-  TextInput
+  TextInput,
+  KeyboardAvoidingView, 
+  Platform
 } from "react-native";
 import {styles} from '../../styles/styles.js';
 import { f, auth, database } from "./../../config/config.js";
+
+const keyboardVerticalOffset = Platform.OS === 'ios' ? 50 : 50
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -47,7 +51,7 @@ class SignUp extends React.Component {
 
   render() {
     return (
-      <View style={styles.center}>
+      <KeyboardAvoidingView style={styles.center} behavior="padding" enabled keyboardVerticalOffset={keyboardVerticalOffset}>
         <Text style={styles.title}>Email:</Text>
         <TextInput style={styles.textInput}
           onChangeText={text => this.setState({ email: text })}
@@ -65,14 +69,14 @@ class SignUp extends React.Component {
             title="Sign Up"
             onPress={() => {
               this.registerUser(this.state.email, this.state.pass),
-                this.props.navigation.navigate("ScannerScreen");
+                this.props.navigation.navigate("HomeScreen");
             }}
             // onPress={() => {this.props.navigation.navigate("LoginScreen")}
             // onPress={() => this.registerUser(this.state.email, this.state.pass)}
           />
         </TouchableHighlight>
         </View>
-      </View>
+        </KeyboardAvoidingView>
     );
   }
 }
