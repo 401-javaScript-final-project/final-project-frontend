@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, Button, Image, ScrollView, Linking} from 'react-native';
+import {View, Text, Button, Image, ScrollView, Linking } from 'react-native';
 import {styles} from '../../styles/styles.js';
 import { f, auth, database } from "./../../config/config.js";
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
@@ -29,17 +29,23 @@ class Home extends React.Component {
 
   render() {
     return (
-      <View style={styles.centerHome}>
-        <ScrollView>
+      <View style={styles.center}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.center, styles.horizontal}>
+        <Text style={styles.mainTitle} >TIPSY</Text>
         <Image source={require('../../styles/images/hat2.png')} style={styles.img}/>  
+        <Text style={styles.mainTitle} >HAT</Text>
+        </View>
+        <View style={styles.center}>
         <Text style={styles.title}>Welcome to your Profile</Text>
-        <Text style={styles.profileTitle}>The Femme Fatales</Text>
+        <Text style={styles.title}>The Femme Fatales</Text>
         <Image source={require('../../styles/images/femmeFatales.png')} style={styles.profileImg}/>
         
-         <Text style={styles.profileTitle}>Events</Text>
+         <Text style={styles.center}>Events</Text>
          <Text onPress={this._linkToWebsite}>
         Vist our website
       </Text>
+      </View>
         <View style={styles.button}>
         <Button
         style={styles.button}
@@ -55,8 +61,6 @@ class Home extends React.Component {
     );
   }
 }
-
-
 
 export default createMaterialBottomTabNavigator({
   Home: {screen: Home},
