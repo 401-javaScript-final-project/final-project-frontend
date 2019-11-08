@@ -12,7 +12,6 @@ import {
   Keyboard
 } from "react-native";
 
-
 import Constants from "expo-constants";
 import { styles } from "../../styles/styles.js";
 
@@ -21,11 +20,10 @@ export default class PaymentScreen extends React.Component {
     super(props);
 
     this.state = {
-      qrCodeData: " ",
-      scanner: undefined,
+      qrCodeData: "",
       tipAmount: 0.0
-
     };
+    console.log("this is state from props", this.state);
   }
 
   componentDidMount() {
@@ -34,62 +32,71 @@ export default class PaymentScreen extends React.Component {
     console.log(qrCodeData);
   }
 
+  handlePaypal() {
+    this.props.navigation.navigate("PaypalScreen", { data: this.state });
+  }
+
   showAlert = () => {
     Alert.alert(
-      'Tipping',
+      "Tipping",
       `Are you sure you want to tip $${this.state.tipAmount} to ${this.state.qrCodeData}?`,
       [
-        {text: 'Yes', onPress: () => Alert.alert('change alert to do some work!')},
-        {text: 'No', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+        {
+          text: "Yes",
+          onPress: () => this.handlePaypal()
+        },
+        {
+          text: "No",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel"
+        }
       ],
       { cancelable: false }
-    )
-    Keyboard.dismiss()
-  }
-    
-  validAmount=()=>{
-    if(!this.state.tipAmount || isNaN(this.state.tipAmount)) Alert.alert("Enter an amount");
-     else {
+    );
+    Keyboard.dismiss();
+  };
+
+  validAmount = () => {
+    if (!this.state.tipAmount || isNaN(this.state.tipAmount))
+      Alert.alert("Enter an amount");
+    else {
       this.showAlert();
     }
-    Keyboard.dismiss() 
-  }
-  render() 
-  {
+    Keyboard.dismiss();
+  };
+  render() {
+    console.log("this is state from render", this.state);
     return (
       <View style={styles.centerPay}>
-                
-        <TouchableOpacity disabled={true} >
+        <TouchableOpacity disabled={true}>
           <Text style={styles.tipTitle}> $ </Text>
         </TouchableOpacity>
-        
-        <TextInput style={styles.inputTip}
-        keyboardType="numeric"
-        placeholder="0.00"
-        onChangeText={text => this.setState({
-            tipAmount: parseFloat(text).toFixed(2)
-          })
-        }
+
+        <TextInput
+          style={styles.inputTip}
+          keyboardType="numeric"
+          placeholder="0.00"
+          onChangeText={text =>
+            this.setState({
+              tipAmount: parseFloat(text).toFixed(2)
+            })
+          }
         />
 
-        <View style={styles.tipButton}> 
-        <Button
-          title="Tip"
-          onPress={this.validAmount}
-
-        />
+        <View style={styles.tipButton}>
+          <Button title="Tip" onPress={this.validAmount} />
         </View>
-        <Image source={require('../../styles/images/hat2.png')} style={styles.img}/>
+        <Image
+          source={require("../../styles/images/hat2.png")}
+          style={styles.img}
+        />
       </View>
     );
   }
 }
 
-
-
 //   render() {
 //     return (
-      
 
 //       <View style={styles.center}>
 //         <Text style={styles.title}>
@@ -150,8 +157,7 @@ export default class PaymentScreen extends React.Component {
 //         <Text style={{ marginLeft: 10 }}>
 //         </Text>
 
-
-//         <Button 
+//         <Button
 
 //           title="Login"
 //           onPress={() => {
@@ -163,4 +169,3 @@ export default class PaymentScreen extends React.Component {
 //     );
 //   }
 // }
-

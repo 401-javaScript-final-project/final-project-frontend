@@ -6,8 +6,7 @@ class PaypalView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: this.props.navigation.getParam("data", "No data read"),
-      payment: "10.00"
+      username: this.props.navigation.getParam("data", "No data read")
     };
 
     // submitData = () => {
@@ -26,11 +25,11 @@ class PaypalView extends Component {
     // this.window.ReactNativeWebView.postMessage("Hello React Native!");
   }
 
-  // componentDidMount() {
-  //   const qrCodeData = this.props.navigation.getParam("data", "No data read");
-  //   this.setState({ qrCodeData: qrCodeData });
-  //   console.log(qrCodeData);
-  // }
+  componentDidMount() {
+    const userData = this.props.navigation.getParam("data", "No data read");
+    this.setState({ userData: useData });
+    console.log(qrCodeData);
+  }
 
   componentDidMount() {
     // window.postMessage("hello world");
