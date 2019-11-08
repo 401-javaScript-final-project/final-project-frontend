@@ -9,7 +9,7 @@ import SignUp from "./screens/auth/signupScreen.js";
 import Scanner from "./screens/app/scannerScreen.js";
 import QRCode from "./screens/app/qrScreen.js";
 import Payment from "./screens/app/paymentScreen.js";
-
+import Paypal from "./screens/app/paypalScreen.js";
 
 const RootStack = createStackNavigator(
   {
@@ -18,7 +18,8 @@ const RootStack = createStackNavigator(
     SignUpScreen: SignUp,
     QRCode: QRCode,
     ScannerScreen: Scanner,
-    PaymentScreen: Payment
+    PaymentScreen: Payment,
+    PaypalScreen: Paypal
   },
   {
     initialRouteName: "LoginScreen"

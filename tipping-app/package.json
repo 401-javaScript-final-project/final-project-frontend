@@ -28,9 +28,11 @@
     "react-native-svg": "^9.13.3",
     "react-native-vector-icons": "^6.6.0",
     "react-native-web": "^0.11.7",
+    "react-native-webview": "7.0.5",
     "react-navigation": "^4.0.10",
     "react-navigation-material-bottom-tabs": "^2.1.5",
-    "react-navigation-stack": "^1.10.3"
+    "react-navigation-stack": "^1.10.3",
+    "react-script-tag": "^1.1.2"
   },
   "devDependencies": {
     "babel-preset-expo": "^7.1.0",
