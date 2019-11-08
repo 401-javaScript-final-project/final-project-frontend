@@ -3,7 +3,11 @@ import { View, Text, Platform, InteractionManager } from "react-native";
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
+
 import "./screens/app/fixtimerbug"; //for android timer issue
+
+import './screens/app/fixtimerbug' //for android timer issue
+
 import Login from "./screens/auth/loginScreen.js";
 import Home from "./screens/app/homeScreen.js";
 import SignUp from "./screens/auth/signupScreen.js";
@@ -20,7 +24,10 @@ const RootStack = createStackNavigator(
     QRCode: QRCode,
     ScannerScreen: Scanner,
     PaymentScreen: Payment,
+
     PaypalScreen: Paypal
+
+
   },
   {
     initialRouteName: "LoginScreen"
