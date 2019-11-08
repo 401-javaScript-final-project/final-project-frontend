@@ -1,21 +1,36 @@
 import * as React from "react";
-import { Text, TextInput, Button, View, StyleSheet, Image, Alert, TouchableOpacity, Keyboard } from "react-native";
+
+import {
+  Text,
+  TextInput,
+  Button,
+  View,
+  StyleSheet,
+  Image,
+  Alert,
+  TouchableOpacity,
+  Keyboard
+} from "react-native";
+
+
 import Constants from "expo-constants";
-import {styles} from '../../styles/styles.js';
+import { styles } from "../../styles/styles.js";
 
 export default class PaymentScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      qrCodeData: " ", 
+
+    this.state = {
+      qrCodeData: " ",
       scanner: undefined,
-      tipAmount: 0.00
+      tipAmount: 0.0
+
     };
   }
 
   componentDidMount() {
-    const qrCodeData = this.props.navigation.getParam( "data", "No data read" );
-    this.setState({ qrCodeData: qrCodeData})
+    const qrCodeData = this.props.navigation.getParam("data", "No data read");
+    this.setState({ qrCodeData: qrCodeData });
     console.log(qrCodeData);
   }
 
@@ -61,6 +76,7 @@ export default class PaymentScreen extends React.Component {
         <Button
           title="Tip"
           onPress={this.validAmount}
+
         />
         </View>
         <Image source={require('../../styles/images/hat2.png')} style={styles.img}/>
@@ -70,9 +86,11 @@ export default class PaymentScreen extends React.Component {
 }
 
 
+
 //   render() {
 //     return (
       
+
 //       <View style={styles.center}>
 //         <Text style={styles.title}>
 //           How much would you like to tip?
@@ -131,7 +149,10 @@ export default class PaymentScreen extends React.Component {
 //         {/* <View style={styles.button}>
 //         <Text style={{ marginLeft: 10 }}>
 //         </Text>
+
+
 //         <Button 
+
 //           title="Login"
 //           onPress={() => {
 //             this.signUserOut();
