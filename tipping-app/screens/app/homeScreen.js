@@ -30,7 +30,7 @@ class Home extends React.Component {
   render() {
     return (
       <View style={styles.center}>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.center, styles.horizontal}>
         <Text style={styles.mainTitle} >TIPSY</Text>
         <Image source={require('../../styles/images/hat2.png')} style={styles.img}/>  
