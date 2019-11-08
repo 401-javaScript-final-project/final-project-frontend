@@ -1,9 +1,10 @@
 {
+  "expoServerPort": null,
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 779,
-  "expoServerNgrokUrl": "https://ej-ast.lizkavalski.tipping-app.exp.direct",
-  "packagerNgrokUrl": "https://packager.ej-ast.lizkavalski.tipping-app.exp.direct",
-  "ngrokPid": 805
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
+  "webpackServerPort": null
 }
