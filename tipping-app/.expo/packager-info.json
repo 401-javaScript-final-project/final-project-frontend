@@ -1,10 +1,10 @@
 {
-  "expoServerPort": null,
+  "expoServerPort": 19000,
   "devToolsPort": 19002,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "packagerPort": 19001,
+  "packagerPid": 319,
+  "expoServerNgrokUrl": "https://u3-cm4.anonymous.tipping-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.u3-cm4.anonymous.tipping-app.exp.direct",
+  "ngrokPid": 347,
   "webpackServerPort": null
 }
