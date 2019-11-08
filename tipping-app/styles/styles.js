@@ -10,12 +10,13 @@ export const styles = StyleSheet.create({
     backgroundColor:'#D5F5E3',
   },
   title: {
-    fontSize:30,
+    fontSize:20,
     padding:10,
     marginBottom: 10,
     overflow:'hidden',
     backgroundColor:'#58D68D',
     borderRadius:10,
+    flexDirection: 'row'
   },
   textInput: {
     backgroundColor: '#F7F9F9',
@@ -33,10 +34,41 @@ export const styles = StyleSheet.create({
     // borderRadius:10,
   },
   img: {
-    flexDirection:'column',
+    flexDirection:'row',
+    alignItems: "center",
+    justifyContent: "center",
     width: 100,
     height:100,
     marginBottom:30,
+  },
+  centerHome: {
+    flex: 1,
+    flexDirection:'row-reverse',
+    flexWrap:'nowrap',
+    fontWeight: 'bold',
+    justifyContent: "center",
+    backgroundColor:'#D5F5E3',
+  },
+  profileImg:{
+    flexDirection:'column',
+    width: 200,
+    height:200,
+  },
+  profileImg:{
+    flexDirection:'column',
+    justifyContent: "center",
+    alignItems: "center",
+    width: 200,
+    height:200,
+  },
+  profileTitle:{
+    fontSize:15,
+    padding:10,
+    marginBottom: 10,
+    overflow:'hidden',
+    backgroundColor:'#58D68D',
+    borderRadius:10,
+    flexDirection: 'row'
   },
   tipButton:{
     flexDirection:'row-reverse',
