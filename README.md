@@ -1,19 +1,13 @@
-# LAB - 401 Final Project
+# Project Name - Tipsy Hat
 
-## Project Name - Tipsy Hat
+## Authors: Jeremy Lee, Elizabeth Kavalski, Adrienne Easton, Joseph Hangarter
 
-### Author: <Group Name Here> - Jeremy Lee, Elizabeth Kavalski, Adrienne Easton, Joseph Hangarter
+### Overview
+
+To make an app that can be used to tip street performers, in a world that carries little cash. Creating functionality for both patrons who want to tip quickly and easily, as well as patrons who want to create more ongoing connection with favorite performers. 
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
-* Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from www.flaticon.com
-
-#### Documentation
-* [api docs](http://xyz.com) (API servers)
-* [jsdoc](http://xyz.com) (Server assignments)
-* [style guide](http://xyz.com) (React assignments)
+* [Github Repository](https://github.com/401-javaScript-final-project/final-project-frontend/tree/master)
 
 ### Modules
 #### `App.js`
@@ -25,7 +19,8 @@
   * #### `homeScreen.js`
   * #### `qrScreen.js`
   * #### `paymentScreen.js`
-  * #### `scanner.js`
+  * #### `paypalScreen.js`
+  * #### `scannerScreen.js`
   * #### `fixtimerbug.js` - temporary fix for android timer bug issue with react native + firebase
 #### `navigation folder`
   * #### `mainNavigator.js`
@@ -45,4 +40,6 @@
 * Used mock of Firebase
 
 #### UML
-![UML]()
+![Brainstorm of possible pages](./tipping-app/assets/pagesbrainstorm.JPG)
+![MVP pages](./tipping-app/assets/pagesMVP.JPG)
+![MVP list](./tipping-app/assets/listMVP.JPG)
