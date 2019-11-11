@@ -5,6 +5,11 @@ export const styles = StyleSheet.create({
     flex: 1,
     resizeMode: 'stretch', // or 'stretch'
   },
+  horizontal: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    // padding: 10,
+  },
   center: {
     flex: 1,
     fontWeight: 'bold',
@@ -86,11 +91,6 @@ export const styles = StyleSheet.create({
     height:60,
     width:60,
     fontSize:20,
-  },
-  horizontal: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    // padding: 10,
   },
   centerPay: {
     flex: 1,

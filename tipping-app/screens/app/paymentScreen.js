@@ -13,7 +13,7 @@ import {
 } from "react-native";
 
 import Constants from "expo-constants";
-import { styles } from "../../styles/styles.js";
+import { styles } from "../../styles/stylesSheets/tipStyle.js";
 
 export default class PaymentScreen extends React.Component {
   constructor(props) {

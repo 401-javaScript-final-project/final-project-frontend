@@ -11,6 +11,8 @@ import {
 import QRCode from 'react-native-qrcode-svg';
 import * as Permissions from 'expo-permissions';
 import { captureScreen } from "react-native-view-shot";
+
+import {styles} from '../../styles/stylesSheets/qrStyle.js';
 class QR extends Component {
   constructor() {
     super();
@@ -113,31 +115,3 @@ class QR extends Component {
   }
 }
 export default QR;
-const styles = StyleSheet.create({
-  MainContainer: {
-    flex: 1,
-    margin: 10,
-    alignItems: 'center',
-    paddingTop: 40,
-  },
-  TextInputStyle: {
-    width: '100%',
-    height: 40,
-    marginTop: 20,
-    borderWidth: 1,
-    textAlign: 'center',
-  },
-  button: {
-    width: '100%',
-    paddingTop: 8,
-    marginTop: 10,
-    paddingBottom: 8,
-    backgroundColor: '#F44336',
-    marginBottom: 20,
-  },
-  TextStyle: {
-    color: '#fff',
-    textAlign: 'center',
-    // fontSize: 18,
-  },
-})

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, Button, TextInput, KeyboardAvoidingView, Platform, Image } from "react-native";
-import { styles } from "../../styles/styles.js";
+import { styles } from "../../styles/stylesSheets/authStyle.js";
 import { f, auth, database } from "./../../config/config.js";
 
 const keyboardVerticalOffset = Platform.OS === 'ios' ? 140 : 120
@@ -60,7 +60,7 @@ class Login extends React.Component {
   render() {
     return (
         <KeyboardAvoidingView style={styles.center} behavior="padding" enabled keyboardVerticalOffset={keyboardVerticalOffset}>
-        <View style={ styles.horizontal }>
+        <View style={styles.horizontal }>
           <Text style={styles.mainTitle} >TIPSY</Text>
         <Image source={require('../../styles/images/hat2.png')} style={styles.img}/>
           <Text style={styles.mainTitle} >HAT</Text>
