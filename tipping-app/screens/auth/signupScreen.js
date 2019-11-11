@@ -8,7 +8,7 @@ import {
   KeyboardAvoidingView, 
   Platform
 } from "react-native";
-import {styles} from '../../styles/styles.js';
+import {styles} from '../../styles/stylesSheets/authStyle.js';
 import { f, auth, database } from "./../../config/config.js";
 
 const keyboardVerticalOffset = Platform.OS === 'ios' ? 50 : 50

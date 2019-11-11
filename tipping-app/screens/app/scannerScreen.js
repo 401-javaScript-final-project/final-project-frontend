@@ -2,7 +2,7 @@ import * as React from "react";
 import { Text, View, StyleSheet, Button, ActivityIndicator } from "react-native";
 import Constants from "expo-constants";
 import * as Permissions from "expo-permissions";
-import { styles } from "../../styles/styles.js";
+import { styles } from "../../styles/stylesSheets/styles.js";
 import { BarCodeScanner } from "expo-barcode-scanner";
 
 export default class ScannerScreen extends React.Component {

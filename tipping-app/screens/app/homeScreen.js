@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, Button, Image, ScrollView, Linking } from 'react-native';
-import {styles} from '../../styles/styles.js';
+import {styles} from '../../styles/stylesSheets/homeStyle.js';
 import { f, auth, database } from "./../../config/config.js";
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
 import Scanner from './scannerScreen.js';

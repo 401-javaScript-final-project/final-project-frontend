@@ -24,7 +24,6 @@ const RootStack = createStackNavigator(
     QRCode: QRCode,
     ScannerScreen: Scanner,
     PaymentScreen: Payment,
-
     PaypalScreen: Paypal
 
 
